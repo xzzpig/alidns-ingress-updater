@@ -1,0 +1,20 @@
+# permissions for end users to view alidnsaccounts.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: alidnsaccount-viewer-role
+rules:
+- apiGroups:
+  - network.xzzpig.com
+  resources:
+  - alidnsaccounts
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - network.xzzpig.com
+  resources:
+  - alidnsaccounts/status
+  verbs:
+  - get

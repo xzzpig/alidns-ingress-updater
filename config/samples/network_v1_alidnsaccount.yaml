@@ -1,0 +1,8 @@
+apiVersion: network.xzzpig.com/v1
+kind: AliDnsAccount
+metadata:
+  name: alidnsaccount-sample
+spec:
+  accessKeyId: YourKeyIdHere
+  accessKeySecret: YourKeySecretHere
+  domainName: yourdomain.com

@@ -1,0 +1,24 @@
+# permissions for end users to edit alidnsaccounts.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: alidnsaccount-editor-role
+rules:
+- apiGroups:
+  - network.xzzpig.com
+  resources:
+  - alidnsaccounts
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - network.xzzpig.com
+  resources:
+  - alidnsaccounts/status
+  verbs:
+  - get

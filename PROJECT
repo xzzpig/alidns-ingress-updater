@@ -1,0 +1,21 @@
+domain: xzzpig.com
+layout:
+- go.kubebuilder.io/v3
+multigroup: true
+projectName: alidns-ingress-updater
+repo: github.com/xzzpig/alidns-ingress-updater
+resources:
+- api:
+    crdVersion: v1
+  controller: true
+  domain: xzzpig.com
+  group: network
+  kind: AliDnsAccount
+  path: github.com/xzzpig/alidns-ingress-updater/apis/network/v1
+  version: v1
+- controller: true
+  domain: xzzpig.com
+  group: networking.k8s.io
+  kind: Ingress
+  version: v1
+version: "3"
