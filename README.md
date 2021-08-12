@@ -5,9 +5,15 @@ A k8s app to auto update alidns from ingress
 
 ### Install via Kubectl
 ```bash
-$ kubectl apply -f https://github.com/xzzpig/alidns-ingress-updater/raw/main/deploy/bundle.yaml
+kubectl apply -f https://github.com/xzzpig/alidns-ingress-updater/raw/main/deploy/bundle.yaml
 ```
 
+## Uninstall
+
+### Uninstall via kubectl
+```bash
+kubectl delete --all alidnsaccount && kubectl delete -f https://github.com/xzzpig/alidns-ingress-updater/raw/main/deploy/bundle.yaml  
+```
 
 # Cookbook
 1. Create AliDnsAccount
@@ -37,7 +43,7 @@ spec:
       paths:
       - backend:
           service:
-            name: example
+            name: example-service
             port:
               number: 5000
         path: /
