@@ -8,7 +8,11 @@ import (
 )
 
 func TestGetIp(t *testing.T) {
-	fmt.Println(utils.GetPublicIP())
+	ip, err := utils.GetPublicIP()
+	if err != nil {
+		t.Error(err)
+	}
+	fmt.Println(ip)
 }
 
 func TestContainsString(t *testing.T) {

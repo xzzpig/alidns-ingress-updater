@@ -13,4 +13,4 @@ kind: Kustomization
 images:
 - name: controller
   newName: xzzpig/alidnsingressupdater
-  newTag: 2.0.0
+  newTag: 2.0.2
